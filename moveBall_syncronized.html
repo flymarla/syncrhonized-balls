@@ -1,0 +1,236 @@
+
+
+<div id="ball" style="
+  z-index:5;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:rgb(0,0,120)"></div>
+
+
+<div id="ball2" style="
+  z-index:5;
+  position:absolute;
+  left:60px;
+  top:0px;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:rgb(10,10,120)"></div>
+
+
+<div id="ball3" style="
+z-index:5;
+position:absolute;
+left:120px;
+top:0px;
+width:50px;
+height:50px;
+border-radius:50%;
+background:rgb(20, 20, 120)"></div>
+
+
+<div id="ball4" style="
+  z-index:5;
+  position:absolute;
+  left:180px;
+  top:0px;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:rgb(30,30, 120)"></div>
+
+<div id="ball5" style="
+z-index:5;
+position:absolute;
+left:240px;
+top:0px;
+width:50px;
+height:50px;
+border-radius:50%;
+background:rgb(40,40, 120)"></div>
+
+<div id="ball6" style="
+  z-index:5;
+  position:absolute;
+  left:300px;
+  top:0px;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:rgb(50,50, 120)"></div>
+
+<div id="ball7" style="
+z-index:5;
+position:absolute;
+left:360px;
+top:0px;
+width:50px;
+height:50px;
+border-radius:50%;
+background:rgb(60,60, 120)"></div>
+
+<div id="ball8" style="
+  z-index:5;
+  position:absolute;
+  left:420px;
+  top:0px;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:rgb(70,70, 120)"></div>
+
+<div id="ball9" style="
+z-index:5;
+position:absolute;
+left:480px;
+top:0px;
+width:50px;
+height:50px;
+border-radius:50%;
+background:rgb(80,80, 120)"></div>
+
+<div id="ball10" style="
+  z-index:5;
+  position:absolute;
+  left:540px;
+  top:0px;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:rgb(55, 1, 71)"></div>
+
+<script>
+
+// starting positions
+var velocityX = 5;
+var velocityY = 3;
+var positionX = 0;
+var positionY = 0;
+var positionX2 = 60;
+var positionX3 = 120;
+var positionX4 = 180;
+var positionX5 = 240;
+var positionX6 = 300;
+var positionX7 = 360;
+var positionX8 = 420;
+var positionX9 = 480;
+var positionX10 = 540;
+
+
+// calling the Ball elements
+var ball = document.getElementById('ball');
+var ball2 = document.getElementById('ball2');
+var ball3 = document.getElementById('ball3');
+var ball4 = document.getElementById('ball4');
+var ball5 = document.getElementById('ball5');
+var ball6 = document.getElementById('ball6');
+var ball7 = document.getElementById('ball7');
+var ball8 = document.getElementById('ball8');
+var ball9 = document.getElementById('ball9');
+var ball10 = document.getElementById('ball10');
+
+// Create Movement
+function moveBall() {
+  // x changes for each ball  
+  positionX = positionX + velocityX;
+  positionX2 = positionX2 + velocityX;
+  positionX3 = positionX3 + velocityX;
+  positionX4 = positionX4 + velocityX;
+  positionX5 = positionX5 + velocityX;
+  positionX6 = positionX6 + velocityX;
+  positionX7 = positionX7 + velocityX;
+  positionX8 = positionX8 + velocityX;
+  positionX9 = positionX9 + velocityX;
+  positionX10 = positionX10 + velocityX;
+
+  // y stays the same
+  positionY = positionY + velocityY;
+
+  // changing the style calls for each ball 
+  ball.style.left = positionX + 'px';
+  ball.style.top = positionY + 'px';
+  ball2.style.left = positionX2 + 'px';
+  ball2.style.top = positionY + 'px';
+  ball3.style.left = positionX3 + 'px';
+  ball3.style.top = positionY + 'px';
+  ball4.style.left = positionX4 + 'px';
+  ball4.style.top = positionY + 'px';
+  ball5.style.left = positionX5 + 'px';
+  ball5.style.top = positionY + 'px';
+  ball6.style.left = positionX6 + 'px';
+  ball6.style.top = positionY + 'px';
+  ball7.style.left = positionX7 + 'px';
+  ball7.style.top = positionY + 'px';
+  ball8.style.left = positionX8 + 'px';
+  ball8.style.top = positionY + 'px';
+  ball9.style.left = positionX9 + 'px';
+  ball9.style.top = positionY + 'px';
+  ball10.style.left = positionX10 + 'px';
+  ball10.style.top = positionY + 'px';
+
+  // creating the boundaries, balls 2-10 follow ball 1
+  if (positionX > 550){
+    velocityX =-5; 
+    ball.style.background = "rgb(0, 0, 120)";
+    ball2.style.background = "rgb(15, 15, 120)";
+    ball3.style.background = "rgb(30, 30, 120)";
+    ball4.style.background = "rgb(45, 45, 120)";
+    ball5.style.background = "rgb(60, 60, 120)";
+    ball6.style.background = "rgb(75, 75, 120)";
+    ball7.style.background = "rgb(90, 90, 120)";
+    ball8.style.background = "rgb(105, 105, 120)";
+    ball9.style.background = "rgb(120, 120, 120)";
+    ball10.style.background = "rgb(135, 135, 120)";
+  }
+  if (positionX <0){
+    velocityX = 5;
+    ball.style.background = "rgb(220,0,220)";
+    ball2.style.background = "rgb(220,20,220)";
+    ball3.style.background = "rgb(220,40,220)";
+    ball4.style.background = "rgb(220,60,220)";
+    ball5.style.background = "rgb(220,80,220)";
+    ball6.style.background = "rgb(220,100,220)";
+    ball7.style.background = "rgb(220,120,220)";
+    ball8.style.background = "rgb(220,140,220)";
+    ball9.style.background = "rgb(220,160,220)";
+    ball10.style.background = "rgb(220,180,220)";
+  }
+  if (positionY > 350){
+    velocityY = -3;
+    ball.style.background = "rgb(0, 196, 0)";
+    ball2.style.background = "rgb(20, 196, 20)";
+    ball3.style.background = "rgb(40, 196, 40)";
+    ball4.style.background = "rgb(60, 196, 60)";
+    ball5.style.background = "rgb(80, 196, 80)";
+    ball6.style.background = "rgb(100, 196, 100)";
+    ball7.style.background = "rgb(120, 196, 120)";
+    ball8.style.background = "rgb(140, 196, 140)";
+    ball9.style.background = "rgb(160, 196, 160)";
+    ball10.style.background = "rgb(180, 196, 180)";
+  }
+  if (positionY < 0){
+    velocityY =3;
+    ball.style.background = "rgb(55, 0, 75)";
+    ball2.style.background = "rgb(55, 10, 75)";
+    ball3.style.background = "rgb(55, 20, 75)";
+    ball4.style.background = "rgb(55, 30, 75)";
+    ball5.style.background = "rgb(55, 40, 75)";
+    ball6.style.background = "rgb(55, 50, 75)";
+    ball7.style.background = "rgb(55, 60, 75)";
+    ball8.style.background = "rgb(55, 70, 75)";
+    ball9.style.background = "rgb(55,80, 75)";
+    ball10.style.background = "rgb(55, 90, 75)";
+  }
+}
+
+
+setInterval(moveBall,50);
+
+
+
+
+</script>
